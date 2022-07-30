@@ -8,7 +8,7 @@ Created on Fri Jul 29 21:22:29 2022
 class Solution:
     def findAndReplacePattern(words: [str], pattern: str) -> [str]:
         resultList=[]
-        def isIsomorphic(s: str, t: str) -> bool:
+        def isIsomorphic(s, t):
             if len(s)!=len(t):
                 return False
             charCount = dict()
