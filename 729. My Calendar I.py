@@ -13,12 +13,10 @@ class MyCalendar:
 
     def book(self, start: int, end: int) -> bool:
         
-        if len(self.booking)>0: 
-            oldStart,oldEnd=self.booking[-1]
-            if start<oldEnd and end>oldStart:
+        for oldStart, oldEnd in self.booking:
+            if oldStart < end and start < oldEnd:
                 return False
         self.booking.append((start, end))
-        
         return True
 
 
